@@ -1,6 +1,7 @@
 package views;
 
 import domain.*;
+import java.awt.Color;
 
 public class VehiculoViewModel {
     private String patente;
