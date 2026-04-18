@@ -316,12 +316,12 @@ public class AgregarVehiculosView extends javax.swing.JFrame {
             
             Persistencia.agregarVehiculo(vehiculo);
             
-            JOptionPane.showMessageDialog(this, "Vehiculo Agregado");
+            JOptionPane.showMessageDialog(this, "Vehiculo Agregado Correctamente");
             
             limpiarCampos();
             
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error en los datos");
+            JOptionPane.showMessageDialog(this, "OOps!, Ocurrio un error en la carga de datos");
         }
     }//GEN-LAST:event_btmAgregarVehiculoActionPerformed
 
