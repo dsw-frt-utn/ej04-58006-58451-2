@@ -24,7 +24,7 @@ public class Persistencia {
         sucursales.add(s2);
     }
     
-    private static void inicializarVehiculos(){
+    /*private static void inicializarVehiculos(){
         Sucursal s1 = sucursales.get(0);
         Sucursal s2 = sucursales.get(1);
         
@@ -43,6 +43,16 @@ public class Persistencia {
         vehiculos.add(v2);
         vehiculos.add(v3);
         vehiculos.add(v4);
+    }*/
+    
+    public static ArrayList<Sucursal> getSucursales(){
+        return sucursales;
+    }
+    
+    //Metodo para agregar vehiculos
+    public static void agregarVehiculo(Vehiculo vehiculo)
+    {
+        vehiculos.add(vehiculo);
     }
     
     public static ArrayList<Vehiculo> getVehiculos(){
@@ -58,6 +68,6 @@ public class Persistencia {
     public static void inicializar(){
         inicializarResponsables();
         inicializarSucursales();
-        inicializarVehiculos();
+        //inicializarVehiculos();
     }
 }

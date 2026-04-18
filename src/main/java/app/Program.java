@@ -2,6 +2,7 @@ package app;
 
 import data.Persistencia;
 import java.util.InvalidPropertiesFormatException;
+import views.AgregarVehiculosView;
 import views.ListarVehiculosView;
 
 public class Program {
@@ -9,5 +10,9 @@ public class Program {
         Persistencia.inicializar();
         ListarVehiculosView view = new ListarVehiculosView();
         view.setVisible(true);
+        
+        AgregarVehiculosView lara = new AgregarVehiculosView();
+        lara.setVisible(true);
+        
     }
 }
