@@ -45,7 +45,7 @@ public class Persistencia {
         vehiculos.add(v4);
     }*/
     
-    public static ArrayList<Sucursal> getSucursales(){
+    public static ArrayList<Sucursal> getSucursal(){
         return sucursales;
     }
     
