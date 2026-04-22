@@ -4,9 +4,10 @@
  */
 package views;
 
-import data.Persistencia;
+//import data.Persistencia;
 import domain.*;
 import java.awt.Color;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,19 +21,25 @@ public class AgregarVehiculosView extends javax.swing.JFrame {
      */
     public AgregarVehiculosView() {
         initComponents();
-        cargarSucursales();
+        cargarSucursal();
+        //Controlador.cargarSucursal();
         this.getContentPane().setBackground(new Color(255, 209, 255));
         this.setLocationRelativeTo(null);
     }
     
-    private void cargarSucursales (){
+    private void cargarSucursal (){
         comboSucursal.removeAllItems();
         
-        for(Sucursal s : Persistencia.getSucursales()){
+        for(Sucursal s : Controlador.getSucursales()){
             comboSucursal.addItem(s);
             
         }
     }
+
+    /*public JComboBox<Sucursal> getComboSucursal() {
+        return comboSucursal;
+    }*/
+    
     
     private void limpiarCampos(){
        txtPatente.setText("");
@@ -353,7 +360,8 @@ public class AgregarVehiculosView extends javax.swing.JFrame {
                 vehiculo = new VehiculoCombustible(patente, marca, modelo, anio, capacidad, sucursal, kmLitro, litrosExtra);
             }
 
-            Persistencia.agregarVehiculo(vehiculo);
+            //Persistencia.agregarVehiculo(vehiculo);
+            Controlador.agregarVehiculoControlador(vehiculo);
 
             JOptionPane.showMessageDialog(this, "Vehiculo Agregado Correctamente");
 
